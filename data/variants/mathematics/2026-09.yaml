@@ -1,0 +1,44 @@
+subject: mathematics
+subject_title: Математика
+slug: "2026-09"
+month: Сентябрь 2026
+title: Математика ОГЭ — сентябрь 2026
+description: Тренировочный вариант первой части (5 заданий с кратким ответом).
+published: true
+tasks:
+  - number: 1
+    statement: >-
+      На клетчатой бумаге с размером клетки 1×1 см изображён прямоугольник со
+      сторонами 3 и 4 клетки (см. рисунок). Найдите его площадь в см².
+    answer_type: number
+    answer: 12
+    image_url: "https://placehold.co/480x360/png?text=3x4"
+    explanation: Площадь прямоугольника = 3 · 4 = 12 см².
+
+  - number: 2
+    statement: "Найдите значение выражения: 3,7 + 2,5 · 4."
+    answer_type: number
+    answer: 13.7
+    explanation: Сначала умножение 2,5·4 = 10, затем 3,7 + 10 = 13,7.
+
+  - number: 3
+    statement: Решите уравнение 2x − 6 = 0. В ответ запишите значение x.
+    answer_type: number
+    answer: 3
+    explanation: 2x = 6 ⇒ x = 3.
+
+  - number: 4
+    statement: >-
+      В классе 25 учеников, из них 15 — девочки. Какую долю класса составляют
+      мальчики? Ответ дайте десятичной дробью.
+    answer_type: number
+    answer: 0.4
+    explanation: Мальчиков 25 − 15 = 10; доля 10/25 = 0,4.
+
+  - number: 5
+    statement: >-
+      Первый член арифметической прогрессии равен 5, разность равна 3.
+      Найдите пятый член прогрессии.
+    answer_type: number
+    answer: 17
+    explanation: a₅ = a₁ + 4d = 5 + 4·3 = 17.

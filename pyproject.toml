@@ -1,0 +1,73 @@
+[project]
+name = "ogebot"
+version = "0.1.0"
+description = "Open-source Telegram bot for practising the test part (Part 1) of the Russian OGE exam."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.11"
+authors = [{ name = "OGEBot contributors" }]
+keywords = ["telegram", "bot", "aiogram", "oge", "education", "exam"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Framework :: AsyncIO",
+    "Topic :: Education",
+]
+
+dependencies = [
+    "aiogram>=3.13,<4",
+    "SQLAlchemy[asyncio]>=2.0.30,<3",
+    "alembic>=1.13,<2",
+    "aiosqlite>=0.20",
+    "asyncpg>=0.29",
+    "pydantic>=2.7,<3",
+    "pydantic-settings>=2.3,<3",
+    "PyYAML>=6.0",
+    "redis>=5.0",
+    "structlog>=24.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.2",
+    "pytest-asyncio>=0.23",
+    "ruff>=0.5",
+    "pre-commit>=3.7",
+]
+parse = [
+    "httpx>=0.27",
+    "beautifulsoup4>=4.12",
+]
+
+[project.scripts]
+ogebot = "ogebot.__main__:main"
+
+[project.urls]
+Homepage = "https://github.com/your-username/ogebot"
+Repository = "https://github.com/your-username/ogebot"
+Issues = "https://github.com/your-username/ogebot/issues"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "C4", "SIM", "ASYNC"]
+ignore = ["B008"]  # function calls in argument defaults (common in aiogram/FastAPI-style code)
+
+[tool.ruff.lint.isort]
+known-first-party = ["ogebot"]

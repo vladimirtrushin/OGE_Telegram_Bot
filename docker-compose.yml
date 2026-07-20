@@ -1,0 +1,46 @@
+# Full stack: bot + PostgreSQL + Redis.
+# Quick start:  cp .env.example .env  &&  edit BOT_TOKEN  &&  docker compose up --build
+#
+# Prefer zero-config SQLite instead? You don't need this file at all — just run
+# the bot directly (see README). This compose wires up the "grown-up" setup.
+
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: ogebot
+      POSTGRES_PASSWORD: ogebot
+      POSTGRES_DB: ogebot
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ogebot"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  bot:
+    build: .
+    env_file: .env
+    environment:
+      # Override the endpoints so the bot talks to the compose services.
+      DATABASE_URL: postgresql+asyncpg://ogebot:ogebot@db:5432/ogebot
+      REDIS_URL: redis://redis:6379/0
+      INIT_DB_ON_STARTUP: "true"
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  pgdata:

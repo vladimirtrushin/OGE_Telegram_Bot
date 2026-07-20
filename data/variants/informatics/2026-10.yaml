@@ -1,0 +1,43 @@
+subject: informatics
+subject_title: Информатика
+slug: "2026-10"
+month: Октябрь 2026
+title: Информатика ОГЭ — октябрь 2026
+description: Короткий тренировочный вариант первой части (5 заданий).
+published: true
+tasks:
+  - number: 1
+    statement: >-
+      Сколько бит информации несёт сообщение о том, что из 8 равновероятных
+      событий произошло одно?
+    answer_type: number
+    answer: 3
+    explanation: log₂(8) = 3 бита.
+
+  - number: 2
+    statement: Сколько единиц в двоичной записи числа 42?
+    answer_type: number
+    answer: 3
+    explanation: 42 = 101010₂ — три единицы.
+
+  - number: 3
+    statement: Переведите двоичное число 101101 в десятичную систему счисления.
+    answer_type: number
+    answer: 45
+    explanation: 32 + 8 + 4 + 1 = 45.
+
+  - number: 4
+    statement: >-
+      У исполнителя две команды: 1) прибавь 3; 2) умножь на 2. Какое число
+      получится из числа 2 после программы 2 1 2 (умножь на 2, прибавь 3, умножь на 2)?
+    answer_type: number
+    answer: 14
+    explanation: 2 → 4 → 7 → 14.
+
+  - number: 5
+    statement: >-
+      Для скольких целых x от 1 до 10 включительно истинно высказывание
+      «(x кратно 2) И (x кратно 3)»?
+    answer_type: number
+    answer: 1
+    explanation: Только 6 кратно и 2, и 3 в этом диапазоне.
