@@ -3,7 +3,7 @@
 > Open-source Telegram bot for practising Part 1 (short-answer) of the Russian OGE exam.
 > Built with **aiogram 3**, **async SQLAlchemy 2** and an extensible YAML task bank.
 
-[![CI](https://github.com/your-username/ogebot/actions/workflows/ci.yml/badge.svg)](https://github.com/your-username/ogebot/actions/workflows/ci.yml)
+[![CI](https://github.com/vladimirtrushin/OGE_Telegram_Bot/actions/workflows/ci.yml/badge.svg)](https://github.com/vladimirtrushin/OGE_Telegram_Bot/actions/workflows/ci.yml)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/)
 [![Code style: ruff](https://img.shields.io/badge/style-ruff-000000.svg)](https://github.com/astral-sh/ruff)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -68,8 +68,8 @@ flowchart LR
 ## 🚀 Быстрый старт (SQLite, без Docker)
 
 ```bash
-git clone https://github.com/your-username/ogebot.git
-cd ogebot
+git clone https://github.com/vladimirtrushin/OGE_Telegram_Bot.git
+cd OGE_Telegram_Bot
 
 python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -e ".[dev]"
@@ -190,6 +190,13 @@ ogebot/
 ## 🤝 Вклад
 
 PR и issue приветствуются! См. [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## 👨‍🏫 Автор
+
+**Трушин Владимир Васильевич**
+
+Есть вопрос по заданию или хочешь позаниматься? Пиши в Telegram:
+[@Vladimir_Trushin](https://t.me/Vladimir_Trushin)
 
 ## 📄 Лицензия
 

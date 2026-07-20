@@ -8,6 +8,21 @@ from ogebot.db.models import Attempt, Submission, Task, Variant
 
 BOT_NAME = "ОГЭ-Тренажёр"
 
+# Автор проекта и контакт для учеников.
+AUTHOR = "Трушин Владимир Васильевич"
+CONTACT_USERNAME = "Vladimir_Trushin"
+CONTACT_URL = f"https://t.me/{CONTACT_USERNAME}"
+CONTACT_LINE = (
+    f'👨‍🏫 Автор: <b>{AUTHOR}</b>\n✉️ Связь: <a href="{CONTACT_URL}">@{CONTACT_USERNAME}</a>'
+)
+
+ABOUT = (
+    "<b>О проекте</b>\n"
+    "{name} — бот для подготовки к первой (тестовой) части ОГЭ.\n\n"
+    f"{CONTACT_LINE}\n\n"
+    "Пиши, если найдёшь ошибку в задании, нужен новый вариант или хочешь позаниматься 👍"
+)
+
 WELCOME_NEW = (
     "👋 Привет! Это <b>{name}</b> — бот для отработки первой (тестовой) части ОГЭ.\n\n"
     "Здесь можно тренироваться на вариантах по месяцам и мгновенно получать проверку.\n\n"
@@ -30,6 +45,7 @@ HELP = (
     "<b>Что умеет {name}</b>\n\n"
     "• /menu — выбрать предмет и вариант\n"
     "• /profile — твой профиль и последние результаты\n"
+    "• /about — об авторе и контакты\n"
     "• /cancel — прервать текущее действие\n"
     "• /help — эта справка\n\n"
     "<b>Как решать</b>\n"
@@ -38,7 +54,8 @@ HELP = (
     "3. Отправляй ответ текстом на каждое задание.\n"
     "4. В конце получишь результат и разбор.\n\n"
     "Ответы проверяются автоматически: регистр, лишние пробелы и запятая в дробях "
-    "не важны."
+    "не важны.\n\n"
+    f"{CONTACT_LINE}"
 )
 
 CHOOSE_SUBJECT = "📚 Выбери предмет:"
@@ -137,6 +154,7 @@ def results(attempt: Attempt, variant: Variant, submissions: list[Submission]) -
         lines.append(f"⚪️ Пропущено заданий: {skipped}")
     lines.append("")
     lines.append("Хочешь ещё? /menu — выбрать новый вариант.")
+    lines.append(f'Вопросы по заданиям — <a href="{CONTACT_URL}">@{CONTACT_USERNAME}</a>')
     return "\n".join(lines)
 
 

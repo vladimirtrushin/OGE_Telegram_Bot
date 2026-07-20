@@ -5,7 +5,7 @@ description = "Open-source Telegram bot for practising the test part (Part 1) of
 readme = "README.md"
 license = { text = "MIT" }
 requires-python = ">=3.11"
-authors = [{ name = "OGEBot contributors" }]
+authors = [{ name = "Трушин Владимир Васильевич" }]
 keywords = ["telegram", "bot", "aiogram", "oge", "education", "exam"]
 classifiers = [
     "Programming Language :: Python :: 3",
@@ -44,9 +44,9 @@ parse = [
 ogebot = "ogebot.__main__:main"
 
 [project.urls]
-Homepage = "https://github.com/your-username/ogebot"
-Repository = "https://github.com/your-username/ogebot"
-Issues = "https://github.com/your-username/ogebot/issues"
+Homepage = "https://github.com/vladimirtrushin/OGE_Telegram_Bot"
+Repository = "https://github.com/vladimirtrushin/OGE_Telegram_Bot"
+Issues = "https://github.com/vladimirtrushin/OGE_Telegram_Bot/issues"
 
 [build-system]
 requires = ["setuptools>=68", "wheel"]

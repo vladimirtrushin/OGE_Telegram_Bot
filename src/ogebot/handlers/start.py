@@ -83,6 +83,11 @@ async def cmd_help(message: Message) -> None:
     await message.answer(texts.HELP.format(name=texts.BOT_NAME))
 
 
+@router.message(Command("about"))
+async def cmd_about(message: Message) -> None:
+    await message.answer(texts.ABOUT.format(name=texts.BOT_NAME))
+
+
 @router.message(Command("profile"))
 async def cmd_profile(message: Message, user: User, session: AsyncSession) -> None:
     attempts = await AttemptRepository(session).recent_finished(user.id, limit=10)

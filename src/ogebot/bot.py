@@ -21,6 +21,7 @@ BOT_COMMANDS = [
     BotCommand(command="start", description="Начать / регистрация"),
     BotCommand(command="menu", description="Выбрать предмет и вариант"),
     BotCommand(command="profile", description="Мой профиль и результаты"),
+    BotCommand(command="about", description="Об авторе и контакты"),
     BotCommand(command="cancel", description="Отменить текущее действие"),
     BotCommand(command="help", description="Справка"),
 ]

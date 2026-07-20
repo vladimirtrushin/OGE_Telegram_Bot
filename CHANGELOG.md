@@ -23,5 +23,5 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Unit and integration tests (grading, loader, exam flow).
 - FIPI parser skeleton (`scripts/parse_fipi.py`).
 
-[Unreleased]: https://github.com/your-username/ogebot/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/your-username/ogebot/releases/tag/v0.1.0
+[Unreleased]: https://github.com/vladimirtrushin/OGE_Telegram_Bot/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/vladimirtrushin/OGE_Telegram_Bot/releases/tag/v0.1.0
